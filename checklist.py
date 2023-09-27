@@ -1,4 +1,4 @@
-checklist = ['purple sox', 'red cloak']
+checklist = []
 
  # CREATE
 def create(item):
@@ -31,10 +31,13 @@ def select(function_code):
     # Print all items
     elif function_code == "P":
         list_all_items()
+    elif function_code == "Q":
+        # where we want to stop the loop
+        return False
     # Catch all
     else:
         print("Unknown Option")
-    return True
+        return True
     
         
 def user_input(prompt):
@@ -70,3 +73,4 @@ while running:
     selection = user_input(
         "Press C to add to lst, R to read from list, P to display list, and Q to quit")
     running = select(selection)
+
